@@ -1,9 +1,11 @@
 # tinker
-Ê¹ÓÃ·½·¨
-1¡¢Ê×ÏÈÔÚ¹¤³ÌgradleÌí¼Ó
+ä½¿ç”¨æ–¹æ³•
+1ã€é¦–å…ˆåœ¨å·¥ç¨‹gradleæ·»åŠ 
 
 classpath "com.tencent.tinker:tinker-patch-gradle-plugin:${TINKER_VERSION}"
-2¡¢È»ºóÔÚapp gralde ÖĞÌí¼Ó
+
+
+2ã€ç„¶ååœ¨app gralde ä¸­æ·»åŠ 
 
   implementation("com.tencent.tinker:tinker-android-lib:${TINKER_VERSION}") { changing = true }
     // Maven local cannot handle transist dependencies.
@@ -11,11 +13,16 @@ classpath "com.tencent.tinker:tinker-patch-gradle-plugin:${TINKER_VERSION}"
     annotationProcessor("com.tencent.tinker:tinker-android-anno:${TINKER_VERSION}") { changing = true }
     compileOnly("com.tencent.tinker:tinker-android-anno:${TINKER_VERSION}") { changing = true }
     implementation "com.android.support:multidex:1.0.1"
-3¡¢ÔÚgradle.propertiesÌí¼Ó
+    
+    
+3ã€åœ¨gradle.propertiesæ·»åŠ 
+
 GRADLE_3=true
 TINKER_VERSION=1.9.2
 TINKERPATCH_VERSION=1.2.2
-4¡¢ÔÚapp gradleÌí¼Ó
+
+
+4ã€åœ¨app gradleæ·»åŠ 
 def javaVersion = JavaVersion.VERSION_1_7
 android {
     compileSdkVersion 28
@@ -28,14 +35,15 @@ android {
         jumboMode = true
         javaMaxHeapSize "4g"
     }
-    ÔÚdefaultConfigÌí¼Ó
+    åœ¨defaultConfigæ·»åŠ 
     multiDexEnabled true
-    ºóÃæ²Î¿¼app gradle
- 5¡¢¸´ÖÆ¹Ù·½µÄdemoÔ´Âë
- ¹¹½¨Ê¹ÓÃ
- 1¡¢assembleDebug
- 2¡¢ĞŞ¸Äapp gradleÉú³ÉµÄapp,ÔÚbakÄ¿Â¼ÖĞ
- 2¡¢tinkerPatchDebug
- ×îºóÊ¹ÓÃadb push /sdcard/patch_signed_7zip.apk
- Ğ¡Ã×8Ê¹ÓÃ²âÊÔ³öÏÖÓĞbug
+    åé¢å‚è€ƒapp gradle
+ 5ã€å¤åˆ¶å®˜æ–¹çš„demoæºç 
+ 
+ æ„å»ºä½¿ç”¨
+ 1ã€assembleDebug
+ 2ã€ä¿®æ”¹app gradleç”Ÿæˆçš„app,åœ¨bakç›®å½•ä¸­
+ 2ã€tinkerPatchDebug
+ æœ€åä½¿ç”¨adb push /sdcard/patch_signed_7zip.apk
+ å°ç±³8ä½¿ç”¨æµ‹è¯•å‡ºç°æœ‰bug
 
